@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vita Aeterna | Eternal Life</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+    <header id="topContent">
+        <!-- Spotlight Search Bar-->
+
+    </header>
+
+    <main>
+        <div id="bookShelf" class="lifted">
+
+        </div>
+
+        <!-- Middle Content-->
+        <div id="middleContent" class="lifted">
+            <h1 id="editorTitle" contenteditable="true"></h1>
+            <div id="editor" contenteditable="true"></div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="/JS/editor.js"></script> 
+        <link  rel="stylesheet" href="/CSS/editor.css">
+
+        <div id="rightContent">
+            
+            <h1 id="directoryTitleText" style="text-align: center; width: 100%;">Note Directory</h1>
+            <input type="file" id="directoryInput" webkitdirectory/>
+            <button onclick="refreshNotes()">Refresh</button>
+            <div id="noteList">
+                <div class="noteListItem lifted">
+                    <div>
+                        <h2>Title</h2>
+                        <a>summary text blah blah blah...............<a>
+                    </div>
+                    <span class="material-symbols-outlined" onclick="deleteNote()">
+                        delete
+                    </span>
+                </div>
+            </div>
+            <button id="addNoteBtn" class="lifted clickable" onclick="createNote()">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+                <a>Add Note</a>
+            </button>
+        </div>
+    </main>
+    
+    <script src="JS/index.js"></script>
+</body>
+</html>

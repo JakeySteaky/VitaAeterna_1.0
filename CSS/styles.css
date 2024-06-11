@@ -1,0 +1,194 @@
+:root{
+    --margin: 10px;
+    --pageMargin: 50px;
+    --borderRadius: 25px;
+    --debug: none;
+    --color1: white;
+    --color2: rgb(242, 242, 242);
+    --color3: rgb(240, 240, 240);
+    --color4: rgb(235, 235, 235);
+    --color5: rgb(200, 200, 200);
+    --accent: rgb(244, 234, 255);
+    --shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 75;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 65;
+}
+small{
+    font-size: 30;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+
+    background-color: var(--color2);
+}
+
+#topContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+
+    border: 1px solid var(--debug);
+}
+
+main{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+
+
+#bookShelf{
+    width: 15%;
+    height: auto;
+    margin: var(--margin);
+
+    background-color: white;
+    border: 1px var(--debug) solid;
+    border-radius: var(--borderRadius);
+
+    transition: width 0.2s ease-in-out;
+}
+
+#bookShelf:hover{
+    width: 25%;
+}
+
+
+#rightContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    width: 40%;
+    height: auto;
+    margin: var(--margin);
+
+    border: 1px solid var(--debug);
+}
+
+
+#addNoteBtn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 75px;
+
+    background-color: white;
+    border: 2px dashed var(--color5);
+    border-radius: var(--borderRadius);
+}
+#addNoteBtn:hover{
+    background-color: var(--accent);
+    border: none;
+}
+
+#noteList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+
+    border: 1px solid var(--debug);
+}
+
+#rightContent::-webkit-scrollbar {
+    display: none;
+}
+
+.noteListItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 75px;
+    margin-top: var(--margin);
+    margin-bottom: var(--margin);
+
+    background-color: white;
+    border-radius: var(--borderRadius);
+}
+
+.noteListItem:hover{
+    background-color: var(--accent);
+}
+
+.noteListItem div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    left: calc(var(--margin) * 2);
+    width: fit-content;
+    max-width: 50%;
+    max-height: 100%;
+    overflow-x: hidden;
+
+    border: 2px solid var(--debug);
+}
+
+.noteListItem h2{
+    margin: 0px;
+    text-wrap: none;
+}
+
+.noteListItem a{
+    margin: 0px;
+    text-wrap: nowrap;
+    font-style:italic;
+}
+
+.noteListItem span{
+    position: relative;
+    align-self: center;
+    justify-self:center;
+
+    right: calc(var(--margin) * 2);
+    
+    border: 2px solid var(--debug);
+}
+.noteListItem span:hover{
+    color: red;
+    cursor: pointer;
+}
+
+
+.lifted{
+    box-shadow: var(--shadow);
+}
+.clickable:hover{
+    background-color: var(--accent);
+    cursor: pointer;
+}

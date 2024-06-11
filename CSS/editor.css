@@ -1,0 +1,41 @@
+#middleContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: auto;
+    margin: var(--margin);
+
+    border: 1px solid var(--debug);
+    border-radius: var(--borderRadius);
+    background-color: var(--color1);
+    text-indent: var(--borderRadius);
+}
+
+#editorTitle{
+    width: calc(100% - calc(var(--pageMargin) * 2));
+    margin: 0px var(--pageMargin);
+
+    border: 2px solid var(--debug);
+}
+
+#editor{
+    overflow-y: scroll;
+    width: calc(100% - calc(var(--pageMargin) * 2));
+    height: 100%;
+    margin: 0px var(--pageMargin);
+    
+    border: 2px solid var(--debug);
+}
+
+
+#editor[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #aaa;
+}
+
+#editor::-webkit-scrollbar {
+    display: none;
+}
